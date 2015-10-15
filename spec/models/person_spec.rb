@@ -27,4 +27,5 @@ RSpec.describe Person, type: :model do
   it 'has an array of phone numbers' do
     expect(person.phone_numbers).to eq([])
   end
+  
 end
