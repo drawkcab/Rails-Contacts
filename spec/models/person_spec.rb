@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 class Person < ActiveRecord::Base
+  has_many :phone_numbers
   validates :first_name, :last_name, presence: true
 end
 
@@ -21,5 +22,9 @@ RSpec.describe Person, type: :model do
   it 'is invalid without a last name' do
     person.last_name = nil
     expect(person).not_to be_valid
+  end
+
+  it 'has an array of phone numbers' do
+    expect(person.phone_numbers).to eq([])
   end
 end
