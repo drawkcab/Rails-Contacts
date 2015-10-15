@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-class Person < ActiveRecord::Base
-  has_many :phone_numbers
-  validates :first_name, :last_name, presence: true
-end
+# class Person < ActiveRecord::Base
+#   validates :first_name, :last_name, presence: true
+#   has_many :phone_numbers
+# end
 
 RSpec.describe Person, type: :model do
   let(:person) do
