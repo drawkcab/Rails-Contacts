@@ -13,4 +13,5 @@ RSpec.describe "people/show", type: :view do
     expect(rendered).to match(/First Name/)
     expect(rendered).to match(/Last Name/)
   end
+
 end
